@@ -1243,11 +1243,12 @@ def parse_args_and_run():
 
     from subprocess import Popen, CREATE_NEW_CONSOLE
 
-    exe = sys.executable
-    if not getattr(sys, "frozen", False) and not hasattr(sys, "_MEIPASS"):
-        exe += "terminal.py"
+    if getattr(sys, "frozen", False) and hasattr(sys, "_MEIPASS"):
+        exe = [sys.executable, "--server"]
+    else:
+        exe = ["python", "terminal.py", "--server"]
 
-    Popen([exe, "--server"], creationflags=CREATE_NEW_CONSOLE)
+    Popen(exe, creationflags=CREATE_NEW_CONSOLE)
 
     main(
         ns_parser.debug,
