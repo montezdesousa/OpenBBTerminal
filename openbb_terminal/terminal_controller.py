@@ -58,6 +58,7 @@ from openbb_terminal.terminal_helper import (
     update_terminal,
     welcome_message,
 )
+from openbb_terminal.core.addin.excel_addin import launch_server
 
 # pylint: disable=too-many-public-methods,import-outside-toplevel, too-many-function-args
 # pylint: disable=too-many-branches,no-member,C0302,too-many-return-statements, inconsistent-return-statements
@@ -1221,6 +1222,10 @@ def parse_args_and_run():
         default="",
         type=str,
     )
+    parser.add_argument(
+        "--server",
+        action="store_true",
+    )
     if sys.argv[1:] and "-" not in sys.argv[1][0]:
         sys.argv.insert(1, "--file")
     ns_parser, unknown = parser.parse_known_args()
@@ -1232,6 +1237,9 @@ def parse_args_and_run():
             console.print(unknown)
         else:
             sys.exit(-1)
+
+    if ns_parser.server:
+        return launch_server()
 
     main(
         ns_parser.debug,

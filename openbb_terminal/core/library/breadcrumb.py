@@ -103,8 +103,8 @@ class Breadcrumb:
         self._trail = trail
 
         self.__doc__ = metadata.docstring
-        if trail == "":
-            BreadcrumbLogger()
+        # if trail == "":
+        #     BreadcrumbLogger()
 
     def __dir__(self):
         return self._metadata.dir_list
