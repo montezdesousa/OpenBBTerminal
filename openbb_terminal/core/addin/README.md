@@ -1,5 +1,7 @@
 # OpenBB Excel Add-in
 
+Parts of the code are taken from [https://www.xlwings.org/](https://docs.xlwings.org/en/latest/udfs.html) implementation of UDFs.
+
 This is only available on Windows.
 
 This folder contains the relevant artifacts to import some functionality of OpenBB SDK in Microsof Excel. 
