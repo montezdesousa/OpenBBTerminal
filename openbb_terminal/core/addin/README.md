@@ -13,7 +13,7 @@ Code is still very hacky... but it works :)
 
 There are 3 relevant pieces to make this work:
 1. Excel add-in `openbb.xlam` is located in the folder "openbb_terminal/core/addin"
-2. OpenBBTerminal.exe build from this branch
+2. OpenBBTerminal.exe build from this branch or the actual code if you have Python installed
 3. The dll located in "openbb_terminal\core\addin\dll". Choose the one appropriate for your architecture 32 (xlwings32-0.29.1.dll) or 64 bit (xlwings64-0.29.1.dll).
 
 There are 2 steps that are only required the first time:
