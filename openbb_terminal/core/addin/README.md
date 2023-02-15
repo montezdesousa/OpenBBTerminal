@@ -4,7 +4,7 @@ This is only available on Windows.
 
 This folder contains the relevant artifacts to import some functionality of OpenBB SDK in Microsof Excel. 
 
-The add-in feature is to provide the DataFrames resulting from SDK commands.
+The add-in feature is to provide the DataFrames resulting from SDK commands, no charts for now.
 
 Code is still very hacky... but it works :)
 
