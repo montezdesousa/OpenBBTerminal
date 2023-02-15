@@ -11,7 +11,7 @@ from PyInstaller.building.build_main import Analysis
 from PyInstaller.building.splash import Splash
 from PyInstaller.compat import is_darwin, is_win
 
-from openbb_terminal.loggers import get_commit_hash
+#from openbb_terminal.loggers import get_commit_hash
 
 NAME = "OpenBBTerminal"
 
@@ -20,7 +20,7 @@ build_type = (
 )
 
 # Local python environment packages folder
-venv_path = Path(sys.executable).parent.parent.resolve()
+venv_path = Path(sys.executable).parent.resolve()
 
 # Check if we are running in a conda environment
 if is_darwin:
@@ -48,7 +48,7 @@ subprocess.run(["cp", source, str(destination)], check=True)
 
 
 # Get latest commit
-commit_hash = get_commit_hash()
+commit_hash = "XYZ" #get_commit_hash()
 build_assets_folder = os.path.join(os.getcwd(), "build", "pyinstaller")
 default_env_file = os.path.join(build_assets_folder, ".env")
 set_key(default_env_file, "OPENBB_LOGGING_COMMIT_HASH", str(commit_hash))

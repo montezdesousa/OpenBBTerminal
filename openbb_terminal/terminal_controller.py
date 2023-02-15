@@ -50,6 +50,7 @@ from openbb_terminal.session.user import User
 from openbb_terminal.terminal_helper import (
     bootup,
     check_for_updates,
+    hide_splashscreen,
     is_auth_enabled,
     is_installer,
     is_reset,
@@ -1267,16 +1268,10 @@ def parse_args_and_run():
             sys.exit(-1)
 
     if ns_parser.server:
+        hide_splashscreen()
         return launch_server()
 
-    from subprocess import Popen, CREATE_NEW_CONSOLE
-
-    if getattr(sys, "frozen", False) and hasattr(sys, "_MEIPASS"):
-        exe = [sys.executable, "--server"]
-    else:
-        exe = ["python", "terminal.py", "--server"]
-
-    Popen(exe, creationflags=CREATE_NEW_CONSOLE)
+    new_server_console()
 
     main(
         ns_parser.debug,
@@ -1287,6 +1282,16 @@ def parse_args_and_run():
         module_hist_file=ns_parser.module_hist_file,
     )
 
+def new_server_console():
+    """Create a new server console."""
+    from subprocess import Popen, CREATE_NEW_CONSOLE
+
+    if is_installer():
+        exe = [sys.executable, "--server"]
+    else:
+        exe = ["python", "terminal.py", "--server"]
+
+    Popen(exe, creationflags=CREATE_NEW_CONSOLE)
 
 if __name__ == "__main__":
     parse_args_and_run()
