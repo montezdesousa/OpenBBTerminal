@@ -1268,6 +1268,7 @@ def parse_args_and_run():
             sys.exit(-1)
 
     if ns_parser.server:
+        hide_splashscreen()
         return launch_server()
 
     new_server_console()
