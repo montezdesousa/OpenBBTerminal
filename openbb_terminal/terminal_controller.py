@@ -1282,6 +1282,7 @@ def parse_args_and_run():
         module_hist_file=ns_parser.module_hist_file,
     )
 
+
 def new_server_console():
     """Create a new server console."""
     from subprocess import Popen, CREATE_NEW_CONSOLE
@@ -1292,6 +1293,7 @@ def new_server_console():
         exe = ["python", "terminal.py", "--server"]
 
     Popen(exe, creationflags=CREATE_NEW_CONSOLE)
+
 
 if __name__ == "__main__":
     parse_args_and_run()
