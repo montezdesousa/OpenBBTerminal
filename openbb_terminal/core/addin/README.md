@@ -24,7 +24,7 @@ Using the add-in:
 1. Open the OpenBBTerminal.exe if you build it or run `python terminal.py`
 2. Query the OpenBB SDK with `=OBB([query], [args])`
 
-Note: It should be possible to launch the server by clicking "Launch COM server" icon on the OpenBB ribbon. To do that and avoiding step 1. of "Using the add-in" list you can open the VBA developer tools and change the path in the module "RibbonMyAddin" with the path to the OpenBBTerminal.exe
+Note: It should be possible to launch the server by clicking "Launch COM server" icon on the OpenBB ribbon. To do that and avoiding step 1. of "Using the add-in" list you can open the VBA developer tools and change the path in the module "RibbonMyAddin" with the path to the OpenBBTerminal.exe. In the future it should be possible to change this path in the GUI directly.
 `Shell "cmd.exe /K [Full path to]\OpenBBTerminal.exe --server"`
 
 Examples:
