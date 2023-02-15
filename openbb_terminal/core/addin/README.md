@@ -17,14 +17,14 @@ There are 3 relevant pieces to make this work:
 3. The dll located in "openbb_terminal\core\addin\dll". Choose the one appropriate for your architecture 32 (xlwings32-0.29.1.dll) or 64 bit (xlwings64-0.29.1.dll).
 
 There are 2 steps that are only required the first time:
-* Copy the "xlwings[XX]-0.29.1.dll" to "C:\Program Files\Microsoft Office\root\Office16" or whatever your Excel.exe lives
-* Open Excel > File > Options > Go to tab Add-ins > Click on "Go..." > "Browse..." > Choose the location of `openbb.xlam`
+1. Copy the "xlwings[XX]-0.29.1.dll" to "C:\Program Files\Microsoft Office\root\Office16" or whatever your Excel.exe lives
+2. Open Excel > File > Options > Go to tab Add-ins > Click on "Go..." > "Browse..." > Choose the location of `openbb.xlam`
 
-Using the add-in:
+## Start using the add-in:
 1. Open the OpenBBTerminal.exe if you build it or run `python terminal.py`
 2. Query the OpenBB SDK with `=OBB([query], [args])`
 
-Note: It should be possible to launch the server by clicking "Launch COM server" icon on the OpenBB ribbon. To do that and avoiding step 1. of "Using the add-in" list you can open the VBA developer tools and change the path in the module "RibbonMyAddin" with the path to the OpenBBTerminal.exe. In the future it should be possible to change this path in the GUI directly.
+Note: It should be possible to launch the server by clicking "Launch COM server" icon on the OpenBB ribbon. To do that and avoiding step 1. of the list above you can open the VBA developer tools and change the path in the module "RibbonMyAddin" with the path to the OpenBBTerminal.exe. In the future it should be possible to change this path in the GUI directly.
 `Shell "cmd.exe /K [Full path to]\OpenBBTerminal.exe --server"`
 
 Examples:
