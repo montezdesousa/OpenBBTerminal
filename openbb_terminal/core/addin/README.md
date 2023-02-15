@@ -26,12 +26,13 @@ There are 2 steps that are only required the first time:
 1. Open the OpenBBTerminal.exe if you build it or run `python terminal.py`
 2. Query the OpenBB SDK in Excel with `=OBB([query], [args])`
 
-Note: It should be possible to launch the server by clicking "Launch COM server" icon on the OpenBB ribbon. To do that and avoiding step 1. of the list above you can open the VBA developer tools and change the path in the module "RibbonMyAddin" with the path to the OpenBBTerminal.exe. In the future it should be possible to change this path in the GUI directly.
-`Shell "cmd.exe /K [Full path to]\OpenBBTerminal.exe --server"`
-
-Examples:
+Usage examples:
 `=OBB("economy.events")`
 `=OBB("stocks.fa.income", "TSLA")`
 `=OBB("forex.load", "EUR", "USD", "d", "1day", "2023-01-01")`
+
+Note: It should be possible to launch the server by clicking "Launch COM server" icon on the OpenBB ribbon. To do that and avoiding step 1. of the list above you can open the VBA developer tools and change the path in the module "RibbonMyAddin" with the path to the OpenBBTerminal.exe. In the future it should be possible to change this path in the GUI directly.
+`Shell "cmd.exe /K [Full path to]\OpenBBTerminal.exe --server"`
+
 
 Finally, there is a "Documentation" icon in the Ribbon that will lead you to the OpenBB SDK reference documentation, that will help finding queries and the correct arguments for each.
