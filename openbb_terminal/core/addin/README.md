@@ -23,7 +23,7 @@ There are 2 steps that are only required the first time:
 2. Open Excel > File > Options > Go to tab Add-ins > Click on "Go..." > "Browse..." > Choose the location of `openbb.xlam`
 
 ## Start using the add-in:
-1. Open the OpenBBTerminal.exe if you build it or run `python terminal.py`
+1. Open the OpenBBTerminal.exe if you build it or run `python terminal.py --server` (this will launch the COM server)
 2. Query the OpenBB SDK in Excel with `=OBB([query], [args])`
 
 Usage examples:
@@ -31,7 +31,7 @@ Usage examples:
 `=OBB("stocks.fa.income", "TSLA")`
 `=OBB("forex.load", "EUR", "USD", "d", "1day", "2023-01-01")`
 
-Note: It should be possible to launch the server by clicking "Launch COM server" icon on the OpenBB ribbon. To do that and avoiding step 1. of the list above you can open the VBA developer tools and change the path in the module "RibbonMyAddin" with the path to the OpenBBTerminal.exe. In the future it should be possible to change this path in the GUI directly.
+Note: It should be possible to launch the server by clicking "Launch COM server" icon on the OpenBB ribbon. To do that and avoiding step 1. of the list above (1. Open the OpenBBTer...) you can open the VBA developer tools and change the path in the module "RibbonMyAddin" with the path to the OpenBBTerminal.exe. In the future it should be possible to change this path in the GUI directly.
 `Shell "cmd.exe /K [Full path to]\OpenBBTerminal.exe --server"`
 
 
