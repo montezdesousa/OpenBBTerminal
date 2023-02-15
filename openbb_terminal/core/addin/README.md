@@ -31,3 +31,5 @@ Examples:
 `=OBB("economy.events")`
 `=OBB("stocks.fa.income", "TSLA")`
 `=OBB("forex.load", "EUR", "USD", "d", "1day", "2023-01-01")`
+
+Finallyy, there is a "Documentation" icon in the Ribbon that will lead you to the OpenBB SDK reference documentation, that will help finding queries and the correct arguments for each.
