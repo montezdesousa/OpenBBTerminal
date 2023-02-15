@@ -23,7 +23,7 @@ There are 2 steps that are only required the first time:
 2. Open Excel > File > Options > Go to tab Add-ins > Click on "Go..." > "Browse..." > Choose the location of `openbb.xlam`
 
 ## Start using the add-in:
-1. Open the OpenBBTerminal.exe if you build it or run `python terminal.py --server` (this will launch the COM server)
+1. Open the OpenBBTerminal.exe if you build it or run `python terminal.py --server` (this will launch the COM server allowing Excel to receive SDK data)
 2. Query the OpenBB SDK in Excel with `=OBB([query], [args])`
 
 Usage examples:
